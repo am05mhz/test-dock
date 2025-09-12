@@ -7,6 +7,6 @@ echo "$TZ" | sudo tee /etc/timezone > /dev/null
 sudo ln -sf "/usr/share/zoneinfo/$TZ" /etc/localtime
 sudo dpkg-reconfigure -f noninteractive tzdata
 
-echo "python ${PYTHON_VERSION}"
-echo "torch ${TORCH_VERSION}"
-echo "cuda ${CUDA_VERSION}"
+echo "python $PYTHON_VERSION"
+echo "torch $TORCH_VERSION"
+echo "cuda $CUDA_VERSION"
