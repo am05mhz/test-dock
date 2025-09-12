@@ -33,9 +33,6 @@ COPY README.md /usr/share/nginx/html/README.md
 
 RUN mkdir /setup
 
-# Copy setup files
-COPY custom_nodes.txt /setup/custom_nodes.txt
-
 # app
 COPY app /setup/app
 
