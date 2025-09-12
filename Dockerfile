@@ -31,6 +31,8 @@ COPY proxy/readme.html /usr/share/nginx/html/readme.html
 # Copy the README.md
 COPY README.md /usr/share/nginx/html/README.md
 
+RUN mkdir /setup
+
 # Copy setup files
 COPY custom_nodes.txt /setup/custom_nodes.txt
 

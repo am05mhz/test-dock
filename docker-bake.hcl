@@ -1,5 +1,5 @@
 variable "DOCKERHUB_REPO_NAME" {
-    default = "am05mhz/pebble-test"
+    default = "am05mhz/dock-test"
 }
 
 variable "PYTHON_VERSION" {
