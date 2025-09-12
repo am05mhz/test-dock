@@ -24,7 +24,7 @@ target "test" {
     args = {
         PYTHON_VERSION     = PYTHON_VERSION
         TORCH_VERSION      = TORCH_VERSION
-        BASE_IMAGE         = "nvidia/cuda:12.4.1-devel-ubuntu22.04"
+        BASE_IMAGE         = "ubuntu:25.10"
         CUDA_VERSION       = "cu124"
     }
     tags = ["${DOCKERHUB_REPO_NAME}:test"]
