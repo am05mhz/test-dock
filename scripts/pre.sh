@@ -29,6 +29,10 @@ setup_miniconda() {
 }
 
 if [ -d "/workspace" ]; then
+    if [ ! -d "/workspace/app" ]; then
+        echo "*** installing app ***"
+        cp -r /setup/app /workspace/app
+    fi
     if [ ! -d "/workspace/miniconda3" ]; then
         echo "*** installing miniconda ***"
         setup_miniconda
