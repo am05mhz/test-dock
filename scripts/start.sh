@@ -43,6 +43,7 @@ start_app() {
     cd /workspace/app
     which pip
     which python
+    python app.py
 }
 
 # ---------------------------------------------------------------------------- #
