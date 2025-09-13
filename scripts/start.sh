@@ -34,6 +34,17 @@ execute_script() {
     fi
 }
 
+start_app() {
+    echo "Starting app..."
+    if [[ ! "$PATH" == *"/workspace/miniconda3/bin"* ]]; then
+        export PATH="/workspace/miniconda3/bin:$PATH"
+    fi
+    source /workspace/miniconda3/bin/activate comfy
+    cd /workspace/app
+    which pip
+    which python
+}
+
 # ---------------------------------------------------------------------------- #
 #                               Main Program                                   #
 # ---------------------------------------------------------------------------- #
@@ -42,6 +53,8 @@ setup_ssh
 start_nginx
 
 execute_script "/setup/pre.sh" "Running pre script..."
+
+start_app
 
 echo "Start script(s) finished, pod is ready to use."
 
